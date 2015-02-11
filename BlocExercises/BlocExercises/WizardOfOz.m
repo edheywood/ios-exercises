@@ -12,13 +12,13 @@
 
 - (BOOL) switchesFromBlackAndWhiteToColor {
     /* WORK HERE */
-//    Return yes instead of No here caused test to run successfully
+//    Return yes instead of No here caused test to run
     return YES;
 }
 
 - (NSString *) mainCharacter {
     /* WORK HERE */
-    return @"John";
+    return @"Dorothy";
 }
 
 @end
