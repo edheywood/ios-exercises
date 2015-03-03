@@ -41,11 +41,11 @@
 //    
 //    @implementation EqualityDeterminer
 //    
-//    - (BOOL) string:(NSString )string1 isTheSameAsString:(NSString )string2 {
+//    - (BOOL) string:(NSString*)string1 isTheSameAsString:(NSString*)string2 {
 //        return [string1 isEqualToString:string2];
 //    }
 //    
-//    - (BOOL) number:(NSNumber )number1 isTheSameAsNumber:(NSNumber )number2 {
+//    - (BOOL) number:(NSNumber*)number1 isTheSameAsNumber:(NSNumber*)number2 {
 //        return [number1 isEqualToNumber:number2];
 //    }
 //    
