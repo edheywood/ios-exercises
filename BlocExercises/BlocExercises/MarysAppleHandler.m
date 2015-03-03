@@ -15,7 +15,7 @@
     
     if (dollars == 4) {
         itemToReturn = @"get out of my store";
-    } else if (dollars ==5) {
+    } else if (dollars == 5) {
         itemToReturn = @"have some gum";
     } else if (dollars == 6) {
         itemToReturn = @"have an apple";
