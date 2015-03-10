@@ -9,24 +9,26 @@ Strings
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
     
     
-    return cheese
+    return "My favouite cheese is \(cheese)"
 }
 
 let fullSentence = favoriteCheeseStringWithCheese("cheddar")
 // Make fullSentence say "My favorite cheese is cheddar."
-println("My favouite cheese is \(fullSentence)")
-
 /*
 
 Arrays & Dictionaries
 
 */
 
-let numberArray = [1, 2, 3, 4, 5]
+var numberArray = [1, 2, 3, 4]
+ numberArray += [5]
+
 // Add 5 to this array
 // WORK HERE
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four", 5 : "five"]
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+numberDictionary [5] = "five"
+numberDictionary
 // Add 5 : "five" to this dictionary
 // WORK HERE
 
@@ -71,9 +73,17 @@ let characters = [worf, picard]
 
 func favoriteDrinksArrayForCharacters(characters:Array<Dictionary<String, String>>) -> Array<String> {
     
-    var favouriteDrinks = ["prune juice", "tea", "beer"]
+    var result = [String]()
+    for characterDictionary in characters {
+        let drink = characterDictionary ["favorite drink"]
+        if drink != nil {
+            result.append(drink!)
+        }
+        
+    }
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     // WORK HERE
+    return result
 }
 
 var favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
@@ -88,18 +98,17 @@ Functions
 
 
 // Make a function that inputs an array of strings and outputs the strings separated by a semicolon
-
-func groceries(list: String) -> String {
-
 let strings = ["milk", "eggs", "bread", "challah"]
+
+func groceries(list: Array<String>) -> String {
     
-    let strings = list
-    
-    let semicolon = ";".join(strings)
+    let semicolon = ";".join(list)
     
     return semicolon
 }
-    
+
+groceries(strings)
+
 // WORK HERE - make your function and pass `strings` in
 
 let expectedOutput = "milk;eggs;bread;challah"
